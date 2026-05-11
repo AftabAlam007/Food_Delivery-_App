@@ -25,7 +25,7 @@
     <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-Visit%20Now-FF6B35?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
-<p>app.admin.email=admin@example.com
+<p>app.admin.email=admin@example.com brbr
 app.admin.password=adminpassword1</p>
 
 
