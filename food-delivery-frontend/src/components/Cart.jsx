@@ -53,7 +53,9 @@ export default function Cart({ onBrowse, onOrderSuccess }) {
         const response = await api.get('/api/customer/cart');
         setCart(response.data);
       } catch (err) {
-        setError(err.response?.data?.message || "Failed to fetch cart.");
+        // Backend connect nahi hone par page block na ho, isliye empty cart set kar rahe hain
+        console.log("Backend offline, showing empty cart.");
+        setCart({ items: [] });
       } finally {
         setIsLoading(false);
       }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Star, Clock, Truck, Heart } from "lucide-react";
+import { allRestaurants } from "./mockData";
 
 // This is a new, unauthenticated API helper hook.
 const usePublicApi = () => {
@@ -47,7 +48,9 @@ export default function RestaurantSection() {
         const data = await publicApi(endpoint);
         setRestaurants(data);
       } catch (err) {
-        setError(err.message);
+        // Backend connect nahi hone par page block na ho, isliye dummy data dikha rahe hain
+        console.log("Backend offline, using dummy restaurant data.");
+        setRestaurants(allRestaurants);
       } finally {
         setIsLoading(false);
       }

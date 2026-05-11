@@ -120,7 +120,8 @@ export default function MyOrders() {
         }
         
       } catch (err) {
-        setError(err.message);
+        console.log("Backend offline, showing empty orders.");
+        setOrders([]);
         // Stop polling on error
         if (pollingTimer.current) clearTimeout(pollingTimer.current);
       } finally {
