@@ -25,32 +25,6 @@
     <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-Visit%20Now-FF6B35?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
----
-
-# 🔑 Default Admin Credentials
-
-Use the following admin credentials to access the application dashboard.
-
-<div align="center">
-
-| Role | Email | Password |
-|---|---|---|
-| 👑 Admin | `admin@example.com` | `adminpassword1` |
-
-</div>
-
----
-
-# ⚙️ Application Properties
-
-```properties
-app.admin.email=admin@example.com
-app.admin.password=adminpassword1
-```
-
-> ⚠️ For security purposes, change the default admin credentials before deploying to production.
-
----
 
 
 
