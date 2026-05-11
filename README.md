@@ -21,10 +21,16 @@
 # 🔴 LIVE DEMO
 
 <p align="center">
-  <a href="https://quickeats-demo.vercel.app/" target="_blank">
+  <a href="https://food-delivery-app-one-zeta.vercel.app/">
     <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-Visit%20Now-FF6B35?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
+<p>app.admin.email=admin@example.com
+app.admin.password=adminpassword1</p>
+
+
+
+
 
 <p align="center">
   <i>Experience fast and seamless food ordering with QuickEats.</i>
