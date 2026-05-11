@@ -39,6 +39,21 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
+      // === DEMO LOGIN BYPASS ===
+      if (email === "demo@user.com" && password === "demo123") {
+        const demoCustomer = { token: "fake-jwt-token", role: "CUSTOMER", email: "demo@user.com", name: "Demo User" };
+        setUser(demoCustomer);
+        navigate('/');
+        return demoCustomer;
+      }
+      if (email === "demo@admin.com" && password === "demo123") {
+        const demoAdmin = { token: "fake-jwt-token", role: "RESTAURANT", email: "demo@admin.com", name: "Demo Admin" };
+        setUser(demoAdmin);
+        navigate('/dashboard'); // Yaa jo bhi aapka restaurant route hai
+        return demoAdmin;
+      }
+      // === DEMO LOGIN BYPASS END ===
+
       const response = await fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -64,6 +79,7 @@ export const AuthProvider = ({ children }) => {
         } else {
           navigate('/'); // A sensible default
         }
+        return data;
       } else {
         throw new Error('Login response did not include an authentication token.');
       }
